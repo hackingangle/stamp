@@ -36,3 +36,7 @@ php artisan migrate
     - http://127.0.0.1:8000/dashboard
 1. 网站入口
     - http://127.0.0.1:8000/
+1. 注册用户入口
+    - http://127.0.0.1:8000/register
+1. 登录用户入口
+    - http://127.0.0.1:8000/login
