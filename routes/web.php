@@ -12,9 +12,7 @@
 */
 
 // 首页
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WebsiteController@index');
 
 // auth
 Auth::routes();

@@ -65,7 +65,7 @@
     {{--</div>--}}
     <div id="left">
         <div id="left_zszx">
-            <div id="left_zszx_title"><a href="/article/index/category/honor.html" class="more">更多&gt;&gt;</a></div>
+            <div id="left_zszx_title"><a href="{{ route('website.product') }}" class="more">更多&gt;&gt;</a></div>
             <div id="left_zszx_content">
                 <div id="in_gd">
                     <div class="in_gd marquee level" id="pro1" direction="up" speed="30" step="0" pause="0">

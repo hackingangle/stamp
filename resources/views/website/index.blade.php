@@ -2,7 +2,7 @@
 
 @section('content')
     <div id="in_alzs">
-        <div id="in_alzs_title">优质章展台<a href="/article/index/category/showcase.html"  class="more2">更多&gt;&gt;</a></div>
+        <div id="in_alzs_title">优质章展台<a href="{{ route('website.product') }}"  class="more2">更多&gt;&gt;</a></div>
         <div id="in_alzs_content">
             <ul>
                 @foreach ($data['products'] as $product)
