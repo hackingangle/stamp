@@ -14,3 +14,7 @@
 .in_gd li a:hover{color:#e80000;}
 .in_gd li a img { width:170px; height:130px;}
 .in_gd li a:hover img { width:170px; height:130px;}
+
+.active {
+    color: #ffd600;
+}

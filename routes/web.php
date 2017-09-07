@@ -30,7 +30,8 @@ Route::get('dashboard/company', 'DashboardController@company')
 // 官网
 Route::get('website', 'WebsiteController@index')
     ->name('website.index');
-
+Route::get('website/company', 'WebsiteController@company')
+    ->name('website.company');
 // api-设置
 Route::post('settings', 'SettingController@store');
 Route::put('settings/{setting}', 'SettingController@update');

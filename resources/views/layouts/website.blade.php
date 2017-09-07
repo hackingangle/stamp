@@ -32,15 +32,31 @@
 <div id="header_menu">
     <div id="menu">
         <ul>
-            <li><a href="/" title="网站首页">网站首页</a>
-            </li><li><a href="/article/index/category/company.html" title="公司简介">公司简介</a>
-            </li><li><a href="/article/index/category/news.html" title="新闻中心">新闻中心</a>
-            </li><li><a href="/article/index/category/Products.html" title="产品中心">产品中心</a>
-            </li><li><a href="/article/index/category/case.html" title="案例展示">案例展示</a>
-            </li><li><a href="/article/index/category/kzlc.html" title="刻章流程">刻章流程</a>
-            </li><li><a href="/article/index/category/honor.html" title="荣誉资质">荣誉资质</a>
-            </li><li><a href="/article/index/category/Contactus.html" title="联系我们">联系我们</a>
-            </li>          </ul>
+            <li>
+                <a {{ $data['nav'] === 'index'?'style=color:#ffd600':'' }} href="{{ route('website.index') }}" title="网站首页">网站首页</a>
+            </li>
+            <li>
+                <a {{ $data['nav'] === 'company'?'style=color:#ffd600':'' }} href="{{ route('website.company') }}" title="公司简介">公司简介</a>
+            </li>
+            <li>
+                <a href="/article/index/category/news.html" title="新闻中心">新闻中心</a>
+            </li>
+            <li>
+                <a href="/article/index/category/Products.html" title="产品中心">产品中心</a>
+            </li>
+            <li>
+                <a href="/article/index/category/case.html" title="案例展示">案例展示</a>
+            </li>
+            <li>
+                <a href="/article/index/category/kzlc.html" title="刻章流程">刻章流程</a>
+            </li>
+            <li>
+                <a href="/article/index/category/honor.html" title="荣誉资质">荣誉资质</a>
+            </li>
+            <li>
+                <a href="/article/index/category/Contactus.html" title="联系我们">联系我们</a>
+            </li>
+        </ul>
     </div>
 </div>
 
@@ -49,7 +65,36 @@
 
 
 <!-- body -->
-@yield('content')
+@yield('wrap_content')
+<div id="wrap">
+    <div id="in_cpzs_title1">产品分类</div>
+    <div id="left_kzlb1">
+        <ul>
+            <li><a href="/article/index/category/guangzu.html">公章</a></li><li><a href="/article/index/category/guangyin.html">财务章</a></li><li><a href="/article/index/category/one.html">发票章</a></li><li><a href="/article/index/category/two.html">人名章</a></li><li><a href="/article/index/category/three.html">钢印</a></li><li><a href="/article/index/category/five.html">光敏章</a></li>    </ul>
+    </div>
+    <div id="left">
+        <div id="left_zszx">
+            <div id="left_zszx_title"><a href="/article/index/category/honor.html" class="more">更多&gt;&gt;</a></div>
+            <div id="left_zszx_content">
+                <div id="in_gd">
+                    <div class="in_gd marquee level" id="pro1" direction="up" speed="30" step="0" pause="0">
+                        <ul>
+                            <li><a href="/article/detail/id/218.html"><img src="/Uploads/Picture/2017-06-08/5938f08866db6.jpg" height="130px" width="170px"><br>北京市乾弘玺印章有限公司-荣誉资质</a>
+                            </li><li><a href="/article/detail/id/217.html"><img src="/Uploads/Picture/2017-06-08/5938f0ede8cb3.jpg" height="130px" width="170px"><br>北京市乾弘玺印章有限公司-荣誉资质</a>
+                            </li><li><a href="/article/detail/id/216.html"><img src="/Uploads/Picture/2017-06-08/5938f0ffce695.jpg" height="130px" width="170px"><br>北京市乾弘玺印章有限公司-荣誉资质</a>
+                            </li>            </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="index_right">
+        @yield('content')
+    </div>
+    @yield('content_down')
+    <div style="clear: both;"></div>
+</div>
 
 <!-- footer -->
 <div id="footer">版权所有：{{ $data['settings']['copyright'] }}<br>
