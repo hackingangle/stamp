@@ -39,22 +39,10 @@
                 <a {{ $data['nav'] === 'company'?'style=color:#ffd600':'' }} href="{{ route('website.company') }}" title="公司简介">公司简介</a>
             </li>
             <li>
-                <a href="/article/index/category/news.html" title="新闻中心">新闻中心</a>
+                <a {{ $data['nav'] === 'flow'?'style=color:#ffd600':'' }} href="{{ route('website.flow') }}" title="刻章流程">刻章流程</a>
             </li>
             <li>
-                <a href="/article/index/category/Products.html" title="产品中心">产品中心</a>
-            </li>
-            <li>
-                <a href="/article/index/category/case.html" title="案例展示">案例展示</a>
-            </li>
-            <li>
-                <a href="/article/index/category/kzlc.html" title="刻章流程">刻章流程</a>
-            </li>
-            <li>
-                <a href="/article/index/category/honor.html" title="荣誉资质">荣誉资质</a>
-            </li>
-            <li>
-                <a href="/article/index/category/Contactus.html" title="联系我们">联系我们</a>
+                <a {{ $data['nav'] === 'contact'?'style=color:#ffd600':'' }} href="{{ route('website.contact') }}" title="contact">联系我们</a>
             </li>
         </ul>
     </div>

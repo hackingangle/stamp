@@ -68,6 +68,14 @@
                         <a class="nav-link {{ $data['nav'] === 'company'?'active':'' }}"
                            href="{{ route('dashboard.company') }}">公司信息</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ $data['nav'] === 'flow'?'active':'' }}"
+                           href="{{ route('dashboard.flow') }}">刻章流程</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ $data['nav'] === 'contact'?'active':'' }}"
+                           href="{{ route('dashboard.contact') }}">联系我们</a>
+                    </li>
                 </ul>
             </nav>
             @yield('content')
