@@ -16,5 +16,10 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('dashboard', 'DashboardController@index')
+    ->name('dashboard.index');
+Route::get('dashboard/settings', 'DashboardController@settings')
+    ->name('dashboard.settings');
 
+// api
+Route::post('settings', 'SettingController@store');

@@ -23,6 +23,23 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard.index');
+        $data = [
+            'nav' => __FUNCTION__,
+        ];
+        return view('dashboard.'. __FUNCTION__, compact('data'));
+
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function settings()
+    {
+        $data = [
+            'nav' => __FUNCTION__,
+        ];
+        return view('dashboard.'. __FUNCTION__, compact('data'));
     }
 }

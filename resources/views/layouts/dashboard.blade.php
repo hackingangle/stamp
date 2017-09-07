@@ -14,6 +14,7 @@
     <link href="{{ asset('css/bootstrap/v4.css') }}" rel="stylesheet">
 
     <!-- Custom header -->
+    <link href="{{ asset('css/dashboard/index.css') }}" rel="stylesheet">
     @yield('header')
 </head>
 <body>
@@ -29,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href=" {{ route('dashboard') }}">后台管理 <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href=" {{ route('dashboard.index') }}">后台管理 <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/') }}">网站首页</a>
@@ -56,43 +57,12 @@
             <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
                 <ul class="nav nav-pills flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Overview <span class="sr-only">(current)</span></a>
+                        <a class="nav-link {{ $data['nav'] === 'index'?'active':'' }}"
+                           href="{{ route('dashboard.index') }}">引导</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Reports</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Analytics</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Export</a>
-                    </li>
-                </ul>
-
-                <ul class="nav nav-pills flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nav item</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nav item again</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">One more nav</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Another nav item</a>
-                    </li>
-                </ul>
-
-                <ul class="nav nav-pills flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nav item again</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">One more nav</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Another nav item</a>
+                        <a class="nav-link {{ $data['nav'] === 'settings'?'active':'' }}"
+                           href="{{ route('dashboard.settings') }}">网站设置</a>
                     </li>
                 </ul>
             </nav>
@@ -102,6 +72,6 @@
 </div>
 
 <!-- Scripts -->
-{{--<script src="{{ asset('js/app.js') }}"></script>--}}
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
