@@ -6,7 +6,7 @@ use App\Company;
 use App\Contact;
 use App\Flow;
 use App\Setting;
-use Illuminate\Http\Request;
+use App\Product;
 
 class DashboardController extends Controller
 {

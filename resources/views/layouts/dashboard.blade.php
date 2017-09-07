@@ -77,6 +77,13 @@
                            href="{{ route('dashboard.contact') }}">联系我们</a>
                     </li>
                 </ul>
+
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link {{ $data['nav'] === 'product'?'active':'' }}"
+                           href="{{ route('product.create') }}">产品设置</a>
+                    </li>
+                </ul>
             </nav>
             @yield('content')
         </div>

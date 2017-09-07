@@ -31,6 +31,19 @@ Route::get('dashboard/flow', 'DashboardController@flow')
 Route::get('dashboard/contact', 'DashboardController@contact')
     ->name('dashboard.contact');
 
+/**
+ * 产品
+ */
+Route::get('product/create', 'ProductController@create')
+    ->name('product.create');
+Route::post('product', 'ProductController@store');
+Route::get('product/{product}', 'ProductController@edit')
+    ->name('product.edit');
+Route::get('product/del/{product}', 'ProductController@destroy');
+Route::put('product/{product}', 'ProductController@update');
+Route::get('product', 'ProductController@index')
+    ->name('product.index');
+
 // 官网
 Route::get('website', 'WebsiteController@index')
     ->name('website.index');
