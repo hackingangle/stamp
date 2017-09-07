@@ -44,6 +44,9 @@
             <li>
                 <a {{ $data['nav'] === 'contact'?'style=color:#ffd600':'' }} href="{{ route('website.contact') }}" title="contact">联系我们</a>
             </li>
+            <li>
+                <a {{ $data['nav'] === 'flow'?'style=color:#ffd600':'' }} href="{{ route('website.product') }}" title="产品中心">产品中心</a>
+            </li>
         </ul>
     </div>
 </div>
@@ -55,11 +58,11 @@
 <!-- body -->
 @yield('wrap_content')
 <div id="wrap">
-    <div id="in_cpzs_title1">产品分类</div>
-    <div id="left_kzlb1">
-        <ul>
-            <li><a href="/article/index/category/guangzu.html">公章</a></li><li><a href="/article/index/category/guangyin.html">财务章</a></li><li><a href="/article/index/category/one.html">发票章</a></li><li><a href="/article/index/category/two.html">人名章</a></li><li><a href="/article/index/category/three.html">钢印</a></li><li><a href="/article/index/category/five.html">光敏章</a></li>    </ul>
-    </div>
+    {{--<div id="in_cpzs_title1">产品分类</div>--}}
+    {{--<div id="left_kzlb1">--}}
+        {{--<ul>--}}
+            {{--<li><a href="/article/index/category/guangzu.html">公章</a></li><li><a href="/article/index/category/guangyin.html">财务章</a></li><li><a href="/article/index/category/one.html">发票章</a></li><li><a href="/article/index/category/two.html">人名章</a></li><li><a href="/article/index/category/three.html">钢印</a></li><li><a href="/article/index/category/five.html">光敏章</a></li>    </ul>--}}
+    {{--</div>--}}
     <div id="left">
         <div id="left_zszx">
             <div id="left_zszx_title"><a href="/article/index/category/honor.html" class="more">更多&gt;&gt;</a></div>
@@ -67,10 +70,11 @@
                 <div id="in_gd">
                     <div class="in_gd marquee level" id="pro1" direction="up" speed="30" step="0" pause="0">
                         <ul>
-                            <li><a href="/article/detail/id/218.html"><img src="/Uploads/Picture/2017-06-08/5938f08866db6.jpg" height="130px" width="170px"><br>北京市乾弘玺印章有限公司-荣誉资质</a>
-                            </li><li><a href="/article/detail/id/217.html"><img src="/Uploads/Picture/2017-06-08/5938f0ede8cb3.jpg" height="130px" width="170px"><br>北京市乾弘玺印章有限公司-荣誉资质</a>
-                            </li><li><a href="/article/detail/id/216.html"><img src="/Uploads/Picture/2017-06-08/5938f0ffce695.jpg" height="130px" width="170px"><br>北京市乾弘玺印章有限公司-荣誉资质</a>
-                            </li>            </ul>
+                            @foreach ($data['topProducts'] as $product)
+                            <li>
+                                <a href="/website/productdetail/{{ $product->id }}"><img src="{{ $product->image }}" height="130px" width="170px"><br>{{ $product->description }}</a>
+                            </li>
+                            @endforeach
                     </div>
                 </div>
             </div>

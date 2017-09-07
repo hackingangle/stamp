@@ -44,6 +44,15 @@
                 </div>
             </div>
             <div class="form-group row">
+                <label for="top" class="col-sm-2 col-form-label">橱窗展示（默认否）</label>
+                <div class="col-sm-10">
+                    <select name="top" class="custom-select d-block my-3" required>
+                        <option value="2">否</option>
+                        <option value="1">是</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
                 <div class="col-sm-10">
                     <button type="submit" class="btn btn-primary" id="applyBtn">新增</button>
                 </div>

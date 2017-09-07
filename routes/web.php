@@ -53,6 +53,10 @@ Route::get('website/flow', 'WebsiteController@flow')
     ->name('website.flow');
 Route::get('website/contact', 'WebsiteController@contact')
     ->name('website.contact');
+Route::get('website/product', 'WebsiteController@product')
+    ->name('website.product');
+Route::get('website/productdetail/{product}', 'WebsiteController@productdetail')
+    ->name('website.productdetail');
 
 // api-设置
 Route::post('settings', 'SettingController@store');

@@ -22,7 +22,6 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::latest()->get();
         $products = DB::table('products')
             ->where('status', 0)
             ->orderBy('updated_at')
@@ -62,6 +61,7 @@ class ProductController extends Controller
         $setting = Product::create([
             'description' => request('description'),
             'image' => request('image'),
+            'top' => request('top'),
         ]);
         return redirect(route('product.create'). '?from=add');
     }
@@ -108,6 +108,7 @@ class ProductController extends Controller
             [
                 'description' => request('description'),
                 'image' => request('image'),
+                'top' => request('top'),
             ]
         );
         return redirect('/product/'. $product->id. '?from=update');

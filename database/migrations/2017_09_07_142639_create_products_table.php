@@ -27,6 +27,10 @@ class CreateProductsTable extends Migration
                 ->nullable()
                 ->default(0)
                 ->comment('状态：0-正常，1-已经删除');
+            $table->tinyInteger('top')
+                ->nullable()
+                ->default(2)
+                ->comment('1-上橱窗推荐，2-不上橱窗推荐');
             $table->timestamps();
         });
     }
