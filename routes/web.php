@@ -19,11 +19,15 @@ Route::get('/', function () {
 // auth
 Auth::routes();
 
-// 页面
+// 后台
 Route::get('dashboard', 'DashboardController@index')
     ->name('dashboard.index');
 Route::get('dashboard/settings', 'DashboardController@settings')
     ->name('dashboard.settings');
+Route::get('dashboard/company', 'DashboardController@company')
+    ->name('dashboard.company');
+
+// 官网
 Route::get('website', 'WebsiteController@index')
     ->name('website.index');
 
@@ -31,3 +35,5 @@ Route::get('website', 'WebsiteController@index')
 Route::post('settings', 'SettingController@store');
 Route::put('settings/{setting}', 'SettingController@update');
 
+Route::post('company', 'CompanyController@store');
+Route::put('company/{company}', 'CompanyController@update');

@@ -64,6 +64,10 @@
                         <a class="nav-link {{ $data['nav'] === 'settings'?'active':'' }}"
                            href="{{ route('dashboard.settings') }}">网站设置</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ $data['nav'] === 'company'?'active':'' }}"
+                           href="{{ route('dashboard.company') }}">公司信息</a>
+                    </li>
                 </ul>
             </nav>
             @yield('content')
