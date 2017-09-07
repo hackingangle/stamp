@@ -23,3 +23,4 @@ Route::get('dashboard/settings', 'DashboardController@settings')
 
 // api
 Route::post('settings', 'SettingController@store');
+Route::put('settings/{setting}', 'SettingController@update');

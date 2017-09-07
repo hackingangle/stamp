@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 class SettingController extends Controller
 {
     /**
+     * 网站设置页面路由名称
+     * @var string
+     */
+    const REDIRECT_SETTINGS_PAGE = 'dashboard.settings';
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -40,7 +46,7 @@ class SettingController extends Controller
             'name' => request('name'),
             'desc' => request('desc'),
         ]);
-        return redirect(route('dashboard.settings'));
+        return redirect(route(self::REDIRECT_SETTINGS_PAGE). '?from=add');
     }
 
     /**
@@ -74,7 +80,13 @@ class SettingController extends Controller
      */
     public function update(Request $request, Setting $setting)
     {
-        //
+        $ret = $setting->update(
+            [
+                'name' => request('name'),
+                'desc' => request('desc'),
+            ]
+        );
+        return redirect(route(self::REDIRECT_SETTINGS_PAGE). '?from=update');
     }
 
     /**
