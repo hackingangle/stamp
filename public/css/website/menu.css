@@ -1,0 +1,112 @@
+/*
+	锛侊紒 娣诲姞娉ㄩ噴鐨勬牱寮忓彲浠ヤ慨鏀� 锛侊紒
+	锛侊紒 瑕佸紑鍚槾褰憋紝闇€瑕佸湪 js 鏂囦欢涓繘琛屼慨鏀癸紝浣嗗紑鍚槾褰卞悗锛屽湪IE6涓湁涓€鐐圭偣鐨� bug 锛侊紒
+*/
+
+/* 璁剧疆鏁翠釜瀵艰埅鎵€鍦ㄧ殑灞傜殑鏍峰紡 */
+#menu{
+    width: 997px;
+    margin:0 auto;
+    height:38px;
+}
+#menu ul { width:997px;height:38px;margin:0 auto; text-align:center;}
+#menu ul li{
+    float: left;
+    width:109px;   /* 鑿滃崟椤圭殑瀹藉害 */
+    height:38px;   /* 鑿滃崟椤圭殑瀹藉害 */
+    line-height:35px;
+    text-align:center;
+    font-size:14px;
+    position:relative;
+    font-family:"寰蒋闆呴粦";
+}
+/* 璁剧疆绗竴琛屼腑姣忎釜鑿滃崟椤逛腑 a 鏍囩骞冲父鐨勬牱寮� */
+#menu ul li a{font-size:14px;
+    display: block;
+    color:#ffffff;
+    font-family:"寰蒋闆呴粦";
+    text-decoration: none;
+}
+
+/*IE6 hack to get sub menu links to behave correctly*/
+* html #menu ul li a{display: block;}
+/* 璁剧疆姣忎釜鑿滃崟椤逛腑 a 鏍囩缁忚繃鐨勬牱寮� */
+#menu ul li a:hover{
+    width:109px;
+    height:38px;
+    margin:0 auto;
+    color:#f6ff04;
+}
+#menu ul li ul{
+    display: none;
+    visibility: hidden;
+    width:230px;
+    height:28px;
+    position:absolute;
+    background:#f5aeac;
+    left:0;
+    top:5px;
+}
+#menu ul li ul li{
+    height:28px;
+    line-height:28px;
+    border:0;
+    width:60px;
+    font-size:12px;
+    font-family:"瀹嬩綋";
+}
+/* 璁剧疆瀛愯彍鍗曚腑姣忎釜鑿滃崟椤逛腑 a 鏍囩骞冲父鐨勬牱寮� */
+#menu ul li ul li a{
+    /* 瀛愯彍鍗曠殑瀹藉害 */
+    height:28px;
+    line-height:28px;
+    color:#ffffff;
+    float:left;
+    font-size:12px;
+    width:60px;
+
+}
+/* 璁剧疆瀛愯彍鍗曚腑姣忎釜鑿滃崟椤逛腑 a 鏍囩榧犳爣缁忚繃鐨勬牱寮� */
+#menu ul li ul li a:hover{
+    height:28px;
+    line-height:28px;
+    color:#ffffff;
+    background: none;
+}
+/* Holly Hack for IE \*/
+* html #menu{height: 1%;}
+/* 鎺у埗棣栬瀵艰埅鍙充晶涓夎鐨勪綅缃� */
+.downarrowclass{
+    position: absolute;
+    top: 38px;
+    left: 45px;
+}
+/* 鎺у埗瀛愬鑸彸渚т笁瑙掔殑浣嶇疆 */
+.rightarrowclass{
+    position: absolute;
+    top: 13px;
+    right: 7px;
+}
+/* 闃村奖鏍峰紡,濡傛灉鍦� js 涓紑鍚簡闃村奖锛屽垯闇€璁剧疆 */
+.ddshadow{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    background: silver;
+}
+/* 閫忔槑搴︾殑璁剧疆 */
+.toplevelshadow{
+    filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+    opacity: 0.8;
+}
+
+/*=====================================*/
+/* 鑿滃崟椤逛箣闂寸殑绔栫嚎 */
+#menu ul li.menu_line{
+    background:url("menu_line.jpg")/*tpa=http://www.qhxkz.com/images/menu_line.jpg*//*tpa=http://www.kunpengkezhang.com/menu_line.jpg*/ no-repeat center;
+    width:2px;
+    height:38px;
+}

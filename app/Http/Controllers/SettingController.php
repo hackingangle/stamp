@@ -43,8 +43,15 @@ class SettingController extends Controller
     public function store(Request $request)
     {
         $setting = Setting::create([
-            'name' => request('name'),
-            'desc' => request('desc'),
+            'title' => request('title'),
+            'logo' => request('logo'),
+            'keywords' => request('keywords'),
+            'description' => request('description'),
+            'banner' => request('banner'),
+            'copyright' => request('copyright'),
+            'mobile' => request('mobile'),
+            'address' => request('address'),
+            'icp' => request('icp'),
         ]);
         return redirect(route(self::REDIRECT_SETTINGS_PAGE). '?from=add');
     }
@@ -82,8 +89,15 @@ class SettingController extends Controller
     {
         $ret = $setting->update(
             [
-                'name' => request('name'),
-                'desc' => request('desc'),
+                'title' => request('title'),
+                'logo' => request('logo'),
+                'keywords' => request('keywords'),
+                'description' => request('description'),
+                'banner' => request('banner'),
+                'copyright' => request('copyright'),
+                'mobile' => request('mobile'),
+                'address' => request('address'),
+                'icp' => request('icp'),
             ]
         );
         return redirect(route(self::REDIRECT_SETTINGS_PAGE). '?from=update');

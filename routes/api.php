@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// api-上传
+Route::post('upload/images', 'UploadController@images');
+Route::get('download/images', 'DownloadController@images')
+    ->name('download.images');
+

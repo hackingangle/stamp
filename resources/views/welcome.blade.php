@@ -83,6 +83,7 @@
                 </div>
 
                 <div class="links">
+                    <a href="{{ route('website.index') }}">网站</a>
                     <a href="/dashboard">后台管理</a>
                     <a href="/login">login</a>
                     <a href="/register">register</a>
