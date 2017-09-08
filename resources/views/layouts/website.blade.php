@@ -45,7 +45,7 @@
                 <a {{ $data['nav'] === 'contact'?'style=color:#ffd600':'' }} href="{{ route('website.contact') }}" title="contact">联系我们</a>
             </li>
             <li>
-                <a {{ $data['nav'] === 'flow'?'style=color:#ffd600':'' }} href="{{ route('website.product') }}" title="产品中心">产品中心</a>
+                <a {{ $data['nav'] === 'product'?'style=color:#ffd600':'' }} href="{{ route('website.product') }}" title="产品中心">产品中心</a>
             </li>
         </ul>
     </div>
@@ -97,5 +97,6 @@
 <script src="{{ asset('js/website/import/scroll.js') }}"></script>
 <script src="{{ asset('js/website/jquery/fancy.js') }}"></script>
 <script src="{{ asset('js/website/import/menu.js') }}"></script>
+<script src="{{ asset('js/website/index.js') }}"></script>
 </body>
 </html>
